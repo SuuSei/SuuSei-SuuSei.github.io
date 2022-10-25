@@ -19,17 +19,19 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    div.d0{
+        display: flex;
+        justify-content: center;
+    }
     div.d2{
-        width: 50%;
-        height: 160px;
-        border: 5px solid white;
-        margin:auto;
-        margin-top: 5em;
+        text-align: center;
+        width: 600px;
+        height: 300px;
         font-size: 5px;
-        line-height: 1.5em;
-        padding:8em;
-        line-height: 2em;
         background-color: white;opacity: 0.8;
+        margin: 3em;
+
+        
     }
     div.db{
         color:rgb(255,255,255);
@@ -62,22 +64,6 @@
         margin-top: 2em;
         border-radius: 0;
     }
-    div.ANS{
-        width: 400px;
-        height:50px;
-        /* border:solid black 2px;*/
-        margin: 1em,auto;
-        margin-left: 120px;
-        text-align: center;
-    }
-    div.pr{
-        width: 400px;
-        height:50px;
-        /* border:solid black 2px;*/
-        margin: 1em;
-        margin-left: 120px;
-        text-align: center;
-    }
     span{
         font-size: 3em;
     }
@@ -96,33 +82,36 @@
     </div>
     <div class="d1">
     </div>  
-    <div class="d2">
-        加法选择题：
-        <div class="pr">
-            <br><br>
-            <span  class ="n"id="num1"></span>+<span class="n" id="num2"></span>=？
+    <div class="d0">
+        <div class="d2">
+            加法选择题：
+            <div class="pr">
+                <br><br>
+                <span  class ="n"id="num1"></span>+<span class="n" id="num2"></span>=？
+            </div>
+            <div class="ANS">
+                A.<button class = "answer" onclick="judgeA()" id = "A"><span id="cA"></sapn></button>
+                B.<button class = "answer" onclick="judgeB()" id = "B"><span id="cB"></span></button>
+                C.<button class = "answer" onclick="judgeC()" id = "C"><span id="cC"></span></button>
+                D.<button class = "answer" onclick="judgeD()" id = "D"><span id="cD"></span></button>
+            </div>
+            <div style="text-align: center;font-size: 5px;"><span>结果：<span id = "rst"></span></span><br><br>
+                <button id="reset">重置</button>
+            </div>
+           
         </div>
-        <div class="ANS">
-            A.<button class = "answer" onclick="judgeA()" id = "A"><span id="cA"></sapn></button>
-            B.<button class = "answer" onclick="judgeB()" id = "B"><span id="cB"></span></button>
-            C.<button class = "answer" onclick="judgeC()" id = "C"><span id="cC"></span></button>
-            D.<button class = "answer" onclick="judgeD()" id = "D"><span id="cD"></span></button>
+        <div class="d2" style="text-align:center ;" font-size = "25px">
+            <span style = "float: left; display:inline-block;font-size:5px;">猜数游戏:</span> <br>
+            <span>请输入要猜的数字</span><br><br>
+            <input type = "text" id="input"><br><br>
+            <span class = "s1">已猜次数：<span id = "count" class="count">0</span></span><br><br>
+            <button id = "guess">提交</button><br><br>
+            结果：<span id = "result"></span><br>
+            <br><button id = "reset2">重置</button>
         </div>
-        <div style="text-align: center;font-size: 5px;"><span>结果：<span id = "rst"></span></span><br><br>
-            <button id="reset">重置</button>
-        </div>
-       
+        <div class = "d2"></div>
     </div>
-    <div class="d2" style="text-align:center ;" font-size = "25px">
-        <span style = "float: left; display:inline-block;font-size:5px;">猜数游戏:</span> <br>
-        <span>请输入要猜的数字</span><br><br>
-        <input type = "text" id="input"><br><br>
-        <span class = "s1">已猜次数：<span id = "count" class="count">0</span></span><br><br>
-        <button id = "guess">提交</button><br><br>
-        结果：<span id = "result"></span><br>
-        <br><button id = "reset2">重置</button>
-    </div>
-    <div class = "d2"></div>
+   
 </body>
 <script src="index.js">
 </script>
